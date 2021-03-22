@@ -35,7 +35,7 @@ while True:
               '\n[ 6 ] = Sequência de Fibonacci'
               '\n[ 7 ] = Tabuadas'
               '\n[ 0 ] = Voltar')
-        menu1 = int(input('O que escolhe Papa? '))
+        menu1 = int(input('O que escolhe? '))
         os.system('cls')
         while True:
             if menu1 == 1: #Soma
@@ -208,7 +208,7 @@ while True:
                 '\n[ 2 ] = Jokenpo '
                 '\n[ 3 ] = Par ou Ímpar '
                 '\n[ 0 ] = Voltar')
-        menu2 = int(input('O que iremos jogar Papa? '))
+        menu2 = int(input('O que iremos jogar? '))
         os.system('cls')
         while True:
             if menu2 == 1: # Jogo da Adivinhação
@@ -216,8 +216,8 @@ while True:
                 print('Vamos jogar Adivinhação!!!')
                 sleep(1)
                 computador = randint(0, 10)  # Faz o computador "PENSAR"
-                print('Sou eu Hime-chan... Acabei de pensar em um número entre 0 e 10.')
-                print('Será que você consegue adivinhar qual foi Papa? ')
+                print('Acabei de pensar em um número entre 0 e 10.')
+                print('Será que você consegue adivinhar qual foi o número que eu pensei? ')
                 acertou = False
                 palpites = 0
                 while not acertou:
@@ -232,7 +232,7 @@ while True:
                         elif jogador > computador:
                             print('Menos...Tente novamente.')
                 sleep(1)
-                print('Acertou com {} tentativas. Parabéns Papa!'.format(palpites))
+                print('Acertou com {} tentativas. Parabéns!'.format(palpites))
                 print('...')
                 sleep(1)
                 adv1 = str(input('Quer jogar novamente? [S/N] ')).strip().upper()[0]
@@ -253,7 +253,7 @@ while True:
                     [ 0 ] PEDRA
                     [ 1 ] PAPEL
                     [ 2 ] TESOURA''')
-                jogadorjk = int(input('Qual é a sua jogada Papa? '))
+                jogadorjk = int(input('Qual é a sua jogada? '))
                 sleep(1)
                 print('JO')
                 sleep(1)
@@ -262,31 +262,31 @@ while True:
                 print('PO!!!')
                 print('-=' * 11)
                 print('Eu joguei {}'.format(itens[computadorjk]))
-                print('Papa jogou {}'.format(itens[jogadorjk]))
+                print('Você jogou {}'.format(itens[jogadorjk]))
                 print('-=' * 11)
                 if computadorjk == 0:  # computador jogou PEDRA
                     if jogadorjk == 0:
                         print('EMPATE!!!')
                     elif jogadorjk == 1:
-                        print('PAPA VENCEU!!!')
+                        print('VOCÊ VENCEU!!!')
                     elif jogadorjk == 2:
-                        print('HIME-CHAN VENCEU!!!')
+                        print('EU VENCI!!!')
                     else:
                         print('JOGADA INVÁLIDA')
                 elif computadorjk == 1:  # computador jogou PAPEL
                     if jogadorjk == 0:
-                        print('HIME-CHAN VENCEU!!!')
+                        print('EU VENCI!!!')
                     elif jogadorjk == 1:
                         print('EMPATE!!!')
                     elif jogadorjk == 2:
-                        print('PAPA VENCEU!!!')
+                        print('VOCÊ VENCEU!!!')
                     else:
                         print('JOGADA INVÁLIDA')
                 elif computadorjk == 2:  # computador jogou TESOURA
                     if jogadorjk == 0:
-                        print('PAPA VENCEU!!!')
+                        print('VOCÊ VENCEU!!!')
                     elif jogadorjk == 1:
-                        print('HIME-CHAN VENCEU!!!')
+                        print('EU VENCI!!!')
                     elif jogadorjk == 2:
                         print('EMPATE!!!')
                     else:
@@ -309,11 +309,11 @@ while True:
                 while tipopi not in 'PI':
                     tipopi = str(input('Par ou Ímpar? [P/I] ')).strip().upper()[0]
                 sleep(1)
-                print(f'Papa jogou {jogadorpi} e eu joguei {computadorpi}. Total de {totalpi} ', end='')
+                print(f'Você jogou {jogadorpi} e eu joguei {computadorpi}. Total de {totalpi} ', end='')
                 print('DEU PAR' if totalpi % 2 == 0 else 'DEU ÍMPAR')
                 if tipopi == 'P':
                     if totalpi % 2 == 0:
-                        print('Você venceu Papa! Parabéns!')
+                        print('Você venceu! Parabéns!')
                     else:
                         print('Venci! EBAAAA!')
                 elif tipopi == 'I':
