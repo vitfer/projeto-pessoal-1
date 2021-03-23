@@ -2,9 +2,11 @@ from time import sleep
 from random import randint
 from datetime import datetime
 import os
+
 nome = ''
 while nome != 'OTOSAN':
     nome = str(input('Identifique-se: ')).strip().upper()
+
 sleep(1)
 os.system('cls')
 print('VERIFICANDO...')
@@ -14,14 +16,17 @@ sleep(1)
 print('BEM - VINDO!')
 sleep(1)
 os.system('cls')
+
 while True:
     print('O que deseja? \n[ 1 ] = Operações Aritméticas '
       '\n[ 2 ] = Jogos '
       '\n[ 3 ] = Data e Hora '
       '\n[ 4 ] = Conversor de Moedas '
-      '\n[ 0 ] = Sair') # Menú
+      '\n[ 0 ] = Sair')  # Menú
+
     menu = int(input('Opção: '))
     os.system('cls')
+
     if menu == 1:
         sleep(0.5)
         print('Entendido...')
@@ -35,89 +40,107 @@ while True:
               '\n[ 6 ] = Sequência de Fibonacci'
               '\n[ 7 ] = Tabuadas'
               '\n[ 0 ] = Voltar')
-        menu1 = int(input('O que escolhe? '))
+        menu1 = int(input('O que escolhe?: '))
         os.system('cls')
+        
         while True:
-            if menu1 == 1: #Soma
+            if menu1 == 1:  # Soma
                 sleep(1)
                 print('Vamos Somar!!!')
                 sleep(1)
-                n1so = int(input('Digite o primeiro valor: '))
-                n2so = int(input('Digite o segundo valor: '))
-                sso = n1so + n2so
-                print(f'A soma entre {n1so} e {n2so} é igual a {sso}.')
-                respsoma = ' '
-                while respsoma not in 'SN':
-                    respsoma = str(input('Quer somar novamente? [S/N] ')).strip().upper()[0]
+                num1_soma = int(input('Digite o primeiro valor: '))
+                num2_soma = int(input('Digite o segundo valor: '))
+                result_soma = num1_soma + num2_soma
+                print(f'A soma entre {num1_soma} e {num2_soma} é igual a {result_soma}.')
+                resp_soma = ' '
+
+                while resp_soma not in 'SN':
+                    resp_soma = str(input('Quer somar novamente? [S/N]: ')).strip().upper()[0]
+
                 os.system('cls')
-                if respsoma == 'N':
+
+                if resp_soma == 'N':
                     os.system('cls')
                     print('Voltando...')
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 2: # Subtração
+
+            if menu1 == 2:  # Subtração
                 sleep(1)
                 print('Vamos Subtrair!!!')
                 sleep(1)
-                n1su = int(input('Digite o primeiro valor: '))
-                n2su = int(input('Digite o segundo valor: '))
-                ssu = n1su - n2su
-                print(f'{n1su} - {n2su} é igual a {ssu}.')
-                respsub = ' '
-                while respsub not in 'SN':
-                    respsub = str(input('Quer subtrair novamente? [S/N] ')).strip().upper()[0]
+                num1_subt = int(input('Digite o primeiro valor: '))
+                num2_subt = int(input('Digite o segundo valor: '))
+                result_subt = num1_subt - num2_subt
+                print(f'{num1_subt} - {num2_subt} é igual a {result_subt}.')
+                resp_subt = ' '
+
+                while resp_subt not in 'SN':
+                    resp_subt = str(input('Quer subtrair novamente? [S/N]: ')).strip().upper()[0]
+
                 os.system('cls')
-                if respsub == 'N':
+
+                if resp_subt == 'N':
                     os.system('cls')
                     print('Voltando...')
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 3: # Multiplicando
+
+            if menu1 == 3:  # Multiplicação
                 sleep(1)
                 print('Vamos Multiplicar!!!')
                 sleep(1)
-                n1mul = float(input('Digite o primeiro valor: '))
-                n2mul = float(input('Digite o segundo valor: '))
-                smul = n1mul * n2mul
-                print(f'{n1mul} x {n2mul} é igual a {smul}.')
-                respmul = ' '
-                while respmul not in 'SN':
-                    respmul = str(input('Quer multiplicar novamente? [S/N] ')).strip().upper()[0]
+                num1_mult = float(input('Digite o primeiro valor: '))
+                num2_mult = float(input('Digite o segundo valor: '))
+                result_mult = num1_mult * num2_mult
+                print(f'{num1_mult} x {num2_mult} é igual a {result_mult}.')
+                resp_mult = ' '
+
+                while resp_mult not in 'SN':
+                    resp_mult = str(input('Quer multiplicar novamente? [S/N]: ')).strip().upper()[0]
+
                 os.system('cls')
-                if respmul == 'N':
+
+                if resp_mult == 'N':
                     os.system('cls')
                     print('Voltando...')
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 4: #Dividindo
+
+            if menu1 == 4:  # Divisão
                 sleep(1)
                 print('Vamos Dividir!!!')
                 sleep(1)
-                n1div = float(input('Digite o primeiro valor: '))
-                n2div = float(input('Digite o segundo valor: '))
-                sdiv = n1div / n2div
-                print(f'{n1div} divido por {n2div} é igual a {sdiv:.2f}.')
-                respdiv = ' '
-                while respdiv not in 'SN':
-                    respdiv = str(input('Quer dividir novamente? [S/N] ')).strip().upper()[0]
+                num1_div = float(input('Digite o primeiro valor: '))
+                num2_div = float(input('Digite o segundo valor: '))
+                resut_div = num1_div / num2_div
+                print(f'{num1_div} divido por {num2_div} é igual a {resut_div:.2f}.')
+                resp_div = ' '
+
+                while resp_div not in 'SN':
+                    resp_div = str(input('Quer dividir novamente? [S/N]: ')).strip().upper()[0]
+
                 os.system('cls')
-                if respdiv == 'N':
+
+                if resp_div == 'N':
                     os.system('cls')
                     print('Voltando...')
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 5: # Cálculo de IMC
+
+            if menu1 == 5:  # Cálculo de IMC
                 sleep(1)
                 print('Cálculo de IMC!!!')
                 sleep(1)
                 peso = float(input('Digite seu peso em Kg: '))
                 altura = float(input('Digite sua altura em metros (Ex.: 1.80): '))
                 imc = peso / altura ** 2
-                print(f'Seu IMC é de {imc:.1f}.')
+                print(f'Seu IMC é de: {imc:.1f}.')
+
                 if imc < 18.5:
                     print('Você está ABAIXO do seu peso ideal!')
                 elif imc >= 18.5 and imc < 25:
@@ -128,65 +151,82 @@ while True:
                     print('Você está com OBESIDADE!')
                 else:
                     print('Você está com OBESIDADE MÓRBIDA, cuidado!')
-                respimc = ' '
-                while respimc not in 'SN':
-                    respimc = str(input('Deseja consultar novamente? [S/N] ')).strip().upper()[0]
+
+                resp_imc = ' '
+
+                while resp_imc not in 'SN':
+                    resp_imc = str(input('Deseja consultar novamente? [S/N]: ')).strip().upper()[0]
+
                 os.system('cls')
-                if respimc == 'N':
+
+                if resp_imc == 'N':
                     os.system('cls')
                     print('VOLTANDO...')
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 6: # Sequência de Fibonacci
+
+            if menu1 == 6:  # Sequência de Fibonacci
                 sleep(1)
                 print('Sequência de Fibonacci!!!')
                 sleep(1)
                 print('-' * 30)
                 print('Sequência de Fibonacci')
                 print('-' * 30)
-                n = int(input('Quantos termos você quer mostrar? '))
-                t1 = 0
-                t2 = 1
+                qnt_termos = int(input('Quantos termos você quer mostrar?: '))
+                termo1 = 0
+                termo2 = 1
                 print('~' * 30)
-                print('{} - {}'.format(t1, t2), end='')
+                print('{} - {}'.format(termo1, termo2), end='')
                 cont = 3
-                while cont <= n:
-                    t3 = t1 + t2
-                    print(' - {}'.format(t3), end='')
-                    t1 = t2
-                    t2 = t3
+
+                while cont <= qnt_termos:
+                    termo3 = termo1 + termo2
+                    print(' - {}'.format(termo3), end='')
+                    termo1 = termo2
+                    termo2 = termo3
                     cont += 1
+
                 print(' - FIM')
                 print('~' * 30)
+
                 while True:
-                    resp = str(input('Quer ver novamente? [S/N} ')).upper()[0]
+                    resp = str(input('Quer ver novamente? [S/N]: ')).upper()[0]
+
                     if resp in 'SN':
                         break
+
                 os.system('cls')
+
                 if resp == 'N':
                     os.system('cls')
                     print('Voltando...')
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 7: # Tabuadas
+
+            if menu1 == 7:  # Tabuadas
                 sleep(1)
                 print('Tabuadas!!!')
                 sleep(1)
-                ntab = int(input('Quer ver a tabuada de qual número? '))
+                tab_num = int(input('Quer ver a tabuada de qual número?: '))
                 sleep(1)
-                print(f'Preparando a tabuada de {ntab}')
+                print(f'Preparando a tabuada de {tab_num}')
                 sleep(1)
                 print('-' * 30)
+
                 for c in range(1, 11):
-                    print(f'{ntab} x {c} = {ntab*c}')
+                    print(f'{tab_num} x {c} = {tab_num * c}')
+
                 print('-' * 30)
+
                 while True:
-                    resptab = str(input('Quer continuar? [S/N]')).upper()[0]
+                    resptab = str(input('Quer continuar? [S/N]: ')).upper()[0]
                     if resptab in 'SN':
                         break
+                    
                 os.system('cls')
+
                 if resptab == 'N':
                     os.system('cls')
                     sleep(1)
@@ -194,11 +234,13 @@ while True:
                     sleep(1)
                     os.system('cls')
                     break
-            if menu1 == 0:
+
+            if menu1 == 0:  # Sair
                 print('Voltando...')
                 sleep(1)
                 os.system('cls')
                 break
+
     if menu == 2:
         sleep(0.5)
         print('Entendido...')
