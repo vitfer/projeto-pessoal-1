@@ -168,12 +168,11 @@ while True:
 
             if menu1 == 6:  # Sequência de Fibonacci
                 sleep(1)
-                print('Sequência de Fibonacci!!!')
-                sleep(1)
                 print('-' * 30)
                 print('Sequência de Fibonacci')
                 print('-' * 30)
-                qnt_termos = int(input('Quantos termos você quer mostrar?: '))
+                sleep(1)
+                qnt_termos = int(input('Quantos termos você quer mostrar? '))
                 termo1 = 0
                 termo2 = 1
                 print('~' * 30)
@@ -209,7 +208,7 @@ while True:
                 sleep(1)
                 print('Tabuadas!!!')
                 sleep(1)
-                tab_num = int(input('Quer ver a tabuada de qual número?: '))
+                tab_num = int(input('Quer ver a tabuada de qual número? '))
                 sleep(1)
                 print(f'Preparando a tabuada de {tab_num}')
                 sleep(1)
