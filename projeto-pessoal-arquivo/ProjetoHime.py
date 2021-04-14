@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 nome = ''
-while nome != 'OTOSAN':
+while nome != 'NOME':
     nome = str(input('Identifique-se: ')).strip().upper()
 
 sleep(1)
